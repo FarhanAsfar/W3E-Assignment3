@@ -895,6 +895,7 @@
       </footer>
     </div>
 
+    <!-- booking card -->
     <div class="container sidebar">
       <aside class="sidebar desktop-only">
         <div class="booking-card">
@@ -1003,7 +1004,7 @@
   </div>
 
     <!-- Date selection modal -->
-    <!-- <div class="modal-layout" id="dateModal">
+    <div class="modal-layout" id="dateModal">
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title" id="dateModalTitle">
@@ -1031,8 +1032,49 @@
             <div class="dates-grid" id="datesGrid"></div> 
           </div>
         </div>
-      </div> -->
+    </div> 
 
+    <!-- guest selection modal -->
+    <div class="modal-layout" id="guestModal">
+    <div class="modal-content guest-modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Select Guests</h2>
+        <button class="modal-close" id="guestModalClose">&times;</button>
+      </div>
+
+      <div class="guest-selector">
+        <p class="guest-selector-title">Guests</p>
+        <div class="guest-controls">
+          <button class="guest-btn" id="guestMinus">−</button>
+          <input type="text" class="guest-input" id="guestInput" value="1" readonly />
+          <button class="guest-btn" id="guestPlus">+</button>
+        </div>
+      </div>
+
+      <div class="guest-selector">
+        <p class="guest-selector-title">Infants</p>
+        <div class="guest-controls">
+          <button class="guest-btn" id="infantMinus">−</button>
+          <input type="text" class="guest-input" id="infantInput" value="0" readonly />
+          <button class="guest-btn" id="infantPlus">+</button>
+        </div>
+      </div>
+
+      <div class="guest-selector">
+        <p class="guest-selector-title">Pets</p>
+        <div class="guest-controls">
+          <button class="guest-btn" id="petMinus">−</button>
+          <input type="text" class="guest-input" id="petInput" value="0" readonly />
+          <button class="guest-btn" id="petPlus">+</button>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-cancel" id="guestCancel">Cancel</button>
+        <button class="btn-confirm" id="guestConfirm">Confirm</button>
+      </div>
+    </div>
+  </div>
 
   </div>
 
