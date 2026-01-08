@@ -1001,6 +1001,25 @@ footer {
     height: 100% !important;
   }
 
+  .img-small2 {
+    position: relative;
+  }
+
+   .show-more-btn {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: transparent;
+      border: 2px solid white;
+      border-radius: 15px;
+      cursor: pointer;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+
   .page-layout {
     display: grid;
     grid-template-columns: 1fr 400px;
