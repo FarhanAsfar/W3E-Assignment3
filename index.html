@@ -850,9 +850,9 @@
               </div>
             </div>
 
-            <div class="guest-section" id="guestsection">
+            <div class="guest-section" id="guestSection">
               <label class="label-small">GUESTS</label>
-              <p class="guest-value">3 Guests, 1 Infant, 1 Pet</p>
+              <p class="guest-value" id="guestValue">1 Guest</p>
             </div>
 
             <div class="alert alert-success">
@@ -867,7 +867,7 @@
               </div>
               <div class="summary-row total-row">
                 <p class="total-label">TOTAL PRICE</p>
-                <p class="total-value">USD $600</p>
+                <p class="total-value" id="totalPrice">USD $2026</p>
               </div>
             </div>
 
@@ -891,6 +891,39 @@
           </div>
         </aside>
       </div>
+
+      <!-- Date selection modal -->
+      <div class="modal-layout" id="dateModal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="dateModalTitle">
+              Select CHECK-IN Date
+            </h2>
+            <button class="modal-close" id="dateModalClose">&times</button>
+          </div>
+          <div class="calendar">
+            <div class="calendar-header">
+              <h3 class="calendar-title" id="calendarMonth">2026</h3>
+              <div class="calendar-nav">
+                <button id="prevMonth">&lt</button>
+                <button id="nextMonth">&gt</button>
+              </div>
+            </div>
+            <div class="weekdays">
+              <div class="weekday">Sun</div>
+              <div class="weekday">Mon</div>
+              <div class="weekday">Tue</div>
+              <div class="weekday">Wed</div>
+              <div class="weekday">Thu</div>
+              <div class="weekday">Fri</div>
+              <div class="weekday">Sat</div>
+            </div>
+            <div class="dates-grid" id="datesGrid"></div> <!--for calendar-->
+          </div>
+        </div>
+      </div>
+
+      
     </div>
 
     <script src="./scripts/modal.js" defer></script>
