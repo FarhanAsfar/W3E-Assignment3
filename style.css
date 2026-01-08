@@ -215,12 +215,20 @@ header {
   padding: 14px;
 }
 
+.more-text {
+  display: none;
+}
+
 .shoreline-details {
   padding-top: 14px;
 }
 
 .show-more {
   padding-top: 14px;
+}
+
+.shoreline-info.expanded .more-text {
+  display: block;
 }
 
 nav a {
