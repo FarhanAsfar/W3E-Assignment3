@@ -576,16 +576,7 @@ nav a {
   font-size: 14px;
   font-weight: 700;
 }
- @keyframes slideIn {
-      from {
-        transform: translateX(400px);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
+ 
 /* footer */
 footer {
   background-color: #0b3342;
@@ -757,6 +748,9 @@ footer {
   .heading {
     font-size: 32px;
   }
+  .cards-container {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      }
 
   .breadcrumb {
     padding: 14px 24px;
@@ -789,11 +783,21 @@ footer {
   }
 }
 
+@media (min-width: 768px) {
+      .cards-container {
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      }
+    }
+
 /* breakpoint 991 */
 @media (min-width: 991px) {
   header {
     padding: 24px 40px;
   }
+
+  .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
 
   .logo {
     font-size: 24px;
@@ -1108,6 +1112,7 @@ footer {
       display: block;
       transition: transform 0.3s ease;
     }
+    
     body.modal-open{
       overflow: hidden;
     }
