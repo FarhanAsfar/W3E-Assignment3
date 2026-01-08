@@ -1047,6 +1047,27 @@ footer {
       position: relative;
       overflow: hidden;
     }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid #e0e0e0;
+      flex-shrink: 0;
+    }
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #999;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
     /* modal gallery */
     .modal-gallery{
@@ -1072,6 +1093,9 @@ footer {
       object-fit: cover;
       display: block;
       transition: transform 0.3s ease;
+    }
+    .body.modal-open{
+      overflow: hidden;
     }
 
   .page-layout {

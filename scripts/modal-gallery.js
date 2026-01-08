@@ -15,7 +15,7 @@ closeModal.addEventListener('click', () => {
     body.classList.remove('modal-open');
 });
 
-// Close modal by clicking outside
+//Close modal by clicking outside
 imageModal.addEventListener('click', (e) => {
     if (e.target === imageModal) {
         imageModal.classList.remove('active');
