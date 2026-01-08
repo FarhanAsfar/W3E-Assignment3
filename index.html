@@ -895,65 +895,64 @@
       </footer>
     </div>
 
+    <!-- booking card -->
     <div class="container sidebar">
       <aside class="sidebar desktop-only">
-        <div class="booking-card">
-          <div class="card-header">
-            <p class="price-main">USD $2026</p>
-            <p class="label-small">AVG PER NIGHT</p>
-          </div>
-
-          <div class="date-grid">
-            <div class="date-field" id="checkinField">
-              <label class="label-small">CHECK-IN</label>
-              <p class="date-value" id="checkinValue">Select Date</p>
-            </div>
-            <div class="date-field" id="checkoutField">
-              <label class="label-small">CHECK-OUT</label>
-              <p class="date-value" id="checkoutValue">Select Date</p>
-            </div>
-          </div>
-
-          <div class="guest-section" id="guestSection">
-            <label class="label-small">GUESTS</label>
-            <p class="guest-value" id="guestValue">1 Guest</p>
-          </div>
-
-          <div class="alert alert-success">
-            <span class="icon">✓</span>
-            <p>Dates selected are available</p>
-          </div>
-
-          <div class="price-summary">
-            <div class="summary-row">
-              <p class="label-text">PRICE PER NIGHT</p>
-              <p class="bold-text">USD $2026</p>
-            </div>
-            <div class="summary-row total-row">
-              <p class="total-label">TOTAL PRICE</p>
-              <p class="total-value" id="totalPrice">USD $2026</p>
-            </div>
-          </div>
-
-          <button class="btn-primary">CHECK AVAILABILITY</button>
-
-          <p class="redirect-text">
-            You will be redirected to <strong>Booking.com</strong>
-          </p>
-
-          <div class="alert alert-promo">
-            <span class="icon">🔥</span>
-            <p>
-              <strong>Hot Deal -</strong> It has been viewed 30 times today
-            </p>
-          </div>
-
-          <p class="footer-note">
-            Not the right fit? Check out our other Top Rated Rentals in
-            <strong>Destin</strong>
-          </p>
+      <div class="booking-card">
+        <div class="card-header">
+          <p class="price-main">USD $2026</p>
+          <p class="label-small">AVG PER NIGHT</p>
         </div>
-      </aside>
+
+        <div class="date-grid">
+          <div class="date-field" id="checkinField">
+            <label class="label-small">CHECK-IN</label>
+            <p class="date-value" id="checkinValue">Select Date</p>
+          </div>
+          <div class="date-field" id="checkoutField">
+            <label class="label-small">CHECK-OUT</label>
+            <p class="date-value" id="checkoutValue">Select Date</p>
+          </div>
+        </div>
+
+        <div class="guest-section" id="guestSection">
+          <label class="label-small">GUESTS</label>
+          <p class="guest-value" id="guestValue">0 Guests</p>
+        </div>
+
+        <div class="alert alert-success">
+          <span class="icon">✓</span>
+          <p id="availabilityText">Select dates to check availability</p>
+        </div>
+
+        <div class="price-summary">
+          <div class="summary-row">
+            <p class="label-text">PRICE PER NIGHT</p>
+            <p class="bold-text">USD $2026</p>
+          </div>
+          <div class="summary-row total-row">
+            <p class="total-label">TOTAL PRICE</p>
+            <p class="total-value" id="totalPrice">USD $0</p>
+          </div>
+        </div>
+
+        <button class="btn-primary">CHECK AVAILABILITY</button>
+
+        <p class="redirect-text">
+          You will be redirected to <strong>Booking.com</strong>
+        </p>
+
+        <div class="alert alert-promo">
+          <span class="icon">🔥</span>
+          <p><strong>Hot Deal -</strong> It has been viewed 30 times today</p>
+        </div>
+
+        <p class="footer-note">
+          Not the right fit? Check out our other Top Rated Rentals in
+          <strong>Destin</strong>
+        </p>
+      </div>
+    </aside>
     </div>
 
      <!-- view all images modal -->
@@ -1003,7 +1002,7 @@
   </div>
 
     <!-- Date selection modal -->
-    <!-- <div class="modal-layout" id="dateModal">
+    <div class="modal-layout" id="dateModal">
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title" id="dateModalTitle">
@@ -1031,13 +1030,55 @@
             <div class="dates-grid" id="datesGrid"></div> 
           </div>
         </div>
-      </div> -->
+    </div> 
 
+    <!-- guest selection modal -->
+    <div class="modal-layout" id="guestModal">
+    <div class="modal-content guest-modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Select Guests</h2>
+        <button class="modal-close" id="guestModalClose">&times;</button>
+      </div>
+
+      <div class="guest-selector">
+        <p class="guest-selector-title">Guests</p>
+        <div class="guest-controls">
+          <button class="guest-btn" id="guestMinus">−</button>
+          <input type="text" class="guest-input" id="guestInput" value="1" readonly />
+          <button class="guest-btn" id="guestPlus">+</button>
+        </div>
+      </div>
+
+      <div class="guest-selector">
+        <p class="guest-selector-title">Infants</p>
+        <div class="guest-controls">
+          <button class="guest-btn" id="infantMinus">−</button>
+          <input type="text" class="guest-input" id="infantInput" value="0" readonly />
+          <button class="guest-btn" id="infantPlus">+</button>
+        </div>
+      </div>
+
+      <div class="guest-selector">
+        <p class="guest-selector-title">Pets</p>
+        <div class="guest-controls">
+          <button class="guest-btn" id="petMinus">−</button>
+          <input type="text" class="guest-input" id="petInput" value="0" readonly />
+          <button class="guest-btn" id="petPlus">+</button>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-cancel" id="guestCancel">Cancel</button>
+        <button class="btn-confirm" id="guestConfirm">Confirm</button>
+      </div>
+    </div>
+  </div>
 
   </div>
 
   <script src="./scripts/modal-gallery.js" defer></script>
   <script src="./scripts/card.js" defer></script>
+  <script src="./scripts/booking.js" defer></script>
 </body>
 
 </html>
