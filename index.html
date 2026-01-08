@@ -831,62 +831,66 @@
         </footer>
       </div>
 
-      <aside class="sidebar desktop-only">
-        <div class="booking-card">
-          <div class="card-header">
-            <p class="price-main">USD $600</p>
-            <p class="label-small">AVG PER NIGHT</p>
-          </div>
-
-          <div class="date-grid">
-            <div class="date-field">
-              <label class="label-small">CHECK-IN</label>
-              <p class="date-value">19 FEB 2026</p>
+      <div class="container">
+        <aside class="sidebar desktop-only">
+          <div class="booking-card">
+            <div class="card-header">
+              <p class="price-main">USD $2026</p>
+              <p class="label-small">AVG PER NIGHT</p>
             </div>
-            <div class="date-field">
-              <label class="label-small">CHECK-OUT</label>
-              <p class="date-value">21 FEB 2026</p>
+
+            <div class="date-grid">
+              <div class="date-field" id="checkinfield">
+                <label class="label-small">CHECK-IN</label>
+                <p class="date-value" id="checkinvalue">Select Date</p>
+              </div>
+              <div class="date-field" id="checkoutfield">
+                <label class="label-small">CHECK-OUT</label>
+                <p class="date-value" id="checkoutvalue">Select Date</p>
+              </div>
             </div>
-          </div>
 
-          <div class="guest-section">
-            <label class="label-small">GUESTS</label>
-            <p class="guest-value">3 Guests, 1 Infant, 1 Pet</p>
-          </div>
-
-          <div class="alert alert-success">
-            <span class="icon">✓</span>
-            <p>Dates selected are available</p>
-          </div>
-
-          <div class="price-summary">
-            <div class="summary-row">
-              <p class="label-text">PRICE PER NIGHT</p>
-              <p class="bold-text">USD $2026</p>
+            <div class="guest-section">
+              <label class="label-small">GUESTS</label>
+              <p class="guest-value">3 Guests, 1 Infant, 1 Pet</p>
             </div>
-            <div class="summary-row total-row">
-              <p class="total-label">TOTAL PRICE</p>
-              <p class="total-value">USD $600</p>
+
+            <div class="alert alert-success">
+              <span class="icon">✓</span>
+              <p>Dates selected are available</p>
             </div>
+
+            <div class="price-summary">
+              <div class="summary-row">
+                <p class="label-text">PRICE PER NIGHT</p>
+                <p class="bold-text">USD $2026</p>
+              </div>
+              <div class="summary-row total-row">
+                <p class="total-label">TOTAL PRICE</p>
+                <p class="total-value">USD $600</p>
+              </div>
+            </div>
+
+            <button class="btn-primary">CHECK AVAILABILITY</button>
+
+            <p class="redirect-text">
+              You will be redirected to <strong>Booking.com</strong>
+            </p>
+
+            <div class="alert alert-promo">
+              <span class="icon">🔥</span>
+              <p>
+                <strong>Hot Deal -</strong> It has been viewed 30 times today
+              </p>
+            </div>
+
+            <p class="footer-note">
+              Not the right fit? Check out our other Top Rated Rentals in
+              <strong>Destin</strong>
+            </p>
           </div>
-
-          <button class="btn-primary">CHECK AVAILABILITY</button>
-
-          <p class="redirect-text">
-            You will be redirected to <strong>Booking.com</strong>
-          </p>
-
-          <div class="alert alert-promo">
-            <span class="icon">🔥</span>
-            <p><strong>Hot Deal -</strong> It has been viewed 30 times today</p>
-          </div>
-
-          <p class="footer-note">
-            Not the right fit? Check out our other Top Rated Rentals in
-            <strong>Destin</strong>
-          </p>
-        </div>
-      </aside>
+        </aside>
+      </div>
     </div>
 
     <script src="./scripts/modal.js" defer></script>
