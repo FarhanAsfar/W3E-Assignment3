@@ -414,21 +414,21 @@ nav a {
   font-weight: bold;
 }
 
-.property-style {
-  display: flex;
-  gap: 10px;
-}
+/* property card styling */
+
+.cards-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
 
 .property-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
   max-width: 320px;
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-image {
@@ -455,7 +455,7 @@ nav a {
   width: 44px;
   height: 34px;
   border-radius: 50%;
-  background: transparent;
+  background: white;
   border: none;
   cursor: pointer;
   display: flex;
@@ -474,6 +474,9 @@ nav a {
   justify-content: space-between;
   margin-bottom: 12px;
   gap: 12px;
+}
+.favorite-btn.active {
+  background: red;
 }
 
 .rating-section {
@@ -524,22 +527,24 @@ nav a {
   font-size: 13px;
   color: #666;
   line-height: 1.2;
-  /* margin-bottom: 12px;
-      padding-bottom: 12px; */
-  border: none;
+  border: 1px solid grey;
 }
 
-.amenities-item::after {
-  content: " • ";
-  margin: 0 3px;
-  color: #999;
+.amenities-item {
+  display: inline;
 }
+
+ .amenities-item::after {
+      content: " • ";
+      margin: 0 6px;
+      color: #999;
+    }
 
 .link-section {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   font-size: 13px;
 }
 
@@ -558,7 +563,7 @@ nav a {
   font-weight: 700;
   color: #6b5aa2;
   font-style: italic;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .check-dates-btn {
@@ -571,7 +576,7 @@ nav a {
   font-size: 14px;
   font-weight: 700;
 }
-
+ 
 /* footer */
 footer {
   background-color: #0b3342;
@@ -743,6 +748,9 @@ footer {
   .heading {
     font-size: 32px;
   }
+  .cards-container {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      }
 
   .breadcrumb {
     padding: 14px 24px;
@@ -775,11 +783,21 @@ footer {
   }
 }
 
+@media (min-width: 768px) {
+      .cards-container {
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      }
+    }
+
 /* breakpoint 991 */
 @media (min-width: 991px) {
   header {
     padding: 24px 40px;
   }
+
+  .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
 
   .logo {
     font-size: 24px;
@@ -1094,6 +1112,7 @@ footer {
       display: block;
       transition: transform 0.3s ease;
     }
+    
     body.modal-open{
       overflow: hidden;
     }
