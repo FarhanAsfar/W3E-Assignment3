@@ -414,21 +414,19 @@ nav a {
   font-weight: bold;
 }
 
-.property-style {
-  display: flex;
-  gap: 10px;
-}
+.cards-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
 
 .property-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
   max-width: 320px;
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-image {
@@ -455,7 +453,7 @@ nav a {
   width: 44px;
   height: 34px;
   border-radius: 50%;
-  background: transparent;
+  background: white;
   border: none;
   cursor: pointer;
   display: flex;
