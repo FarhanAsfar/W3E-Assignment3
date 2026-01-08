@@ -414,6 +414,8 @@ nav a {
   font-weight: bold;
 }
 
+/* property card styling */
+
 .cards-container {
       max-width: 1200px;
       margin: 0 auto;
@@ -473,6 +475,9 @@ nav a {
   margin-bottom: 12px;
   gap: 12px;
 }
+.favorite-btn.active {
+  background: red;
+}
 
 .rating-section {
   display: flex;
@@ -522,22 +527,24 @@ nav a {
   font-size: 13px;
   color: #666;
   line-height: 1.2;
-  /* margin-bottom: 12px;
-      padding-bottom: 12px; */
-  border: none;
+  border: 1px solid grey;
 }
 
-.amenities-item::after {
-  content: " • ";
-  margin: 0 3px;
-  color: #999;
+.amenities-item {
+  display: inline;
 }
+
+ .amenities-item::after {
+      content: " • ";
+      margin: 0 6px;
+      color: #999;
+    }
 
 .link-section {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   font-size: 13px;
 }
 
@@ -556,7 +563,7 @@ nav a {
   font-weight: 700;
   color: #6b5aa2;
   font-style: italic;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .check-dates-btn {
@@ -569,7 +576,16 @@ nav a {
   font-size: 14px;
   font-weight: 700;
 }
-
+ @keyframes slideIn {
+      from {
+        transform: translateX(400px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
 /* footer */
 footer {
   background-color: #0b3342;
